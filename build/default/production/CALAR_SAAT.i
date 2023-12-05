@@ -11,8 +11,6 @@
 
 
 
-
-
 #pragma config FOSC = INTOSCIO
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -21,8 +19,6 @@
 #pragma config LVP = OFF
 #pragma config CPD = OFF
 #pragma config CP = OFF
-
-
 
 
 
@@ -1192,29 +1188,42 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 19 "CALAR_SAAT.c" 2
+# 15 "CALAR_SAAT.c" 2
 
 
+short sayac=0;
+void __attribute__((picinterrupt(("")))) timer1(){
+    if(TMR1IF){
+        TMR1=15536;
+        TMR1IF=0;
+        sayac++;
+        if(sayac==20){
+            RB0=1;
+        }
+        if(sayac==40){
+            sayac=0;
+            RB0=0;
+        }
+    }
+}
 
-
-int main() {
+main() {
     PCONbits.OSCF=1;
+
+    INTCONbits.GIE=1;
+    INTCONbits.PEIE=1;
+    PIE1bits.TMR1IE=1;
+
+    T1CONbits.T1CKPS0=0;
+    T1CONbits.T1CKPS1=0;
+    T1CONbits.TMR1CS=0;
+    T1CONbits.TMR1ON=1;
+
     TRISB0=0;
     TRISB1=0;
     TRISB4=1;
 
     while(1){
-        if(RB4){
-          RB0=1;
-        RB1=1;
-        _delay((unsigned long)((500)*(4000000/4000.0)));
-        RB0=0;
-        _delay((unsigned long)((500)*(4000000/4000.0)));
-        }
-        else{
-            PORTB=0;
-        }
 
     }
-    return 0;
 }
