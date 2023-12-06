@@ -11,10 +11,12 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"18 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
+"20 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
 [v _timer1 timer1 `II(v  1 e 1 0 ]
 "33
 [v _main main `(i  1 e 2 0 ]
+"228 C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
 [s S48 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -24,7 +26,7 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-"333 C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h
+"333
 [s S57 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -47,6 +49,8 @@
 ]
 [u S111 . 1 `S101 1 . 1 0 `S107 1 . 1 0 ]
 [v _T1CONbits T1CONbits `VES111  1 e 1 @16 ]
+"969
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 [s S80 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
@@ -75,20 +79,17 @@
 [v _RB0 RB0 `VEb  1 e 0 @48 ]
 "1585
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
-"1636
-[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
-"1639
-[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
-"1648
-[v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
-"17 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
+"18 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
 [v _sayac sayac `s  1 e 2 0 ]
+[v _saniye saniye `s  1 e 2 0 ]
+[v _dakika dakika `s  1 e 2 0 ]
+[v _saat saat `s  1 e 2 0 ]
 "33
 [v _main main `(i  1 e 2 0 ]
 {
-"52
+"60
 } 0
-"18
+"20
 [v _timer1 timer1 `II(v  1 e 1 0 ]
 {
 "31

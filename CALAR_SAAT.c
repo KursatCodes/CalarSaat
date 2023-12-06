@@ -14,39 +14,47 @@
 // Use project enums instead of #define for ON and OFF.
 #include <xc.h>
 #define _XTAL_FREQ 4000000
-short sayac=0;
+
+short sayac=0,saniye=0,dakika=0,saat=0;
+
 void __interrupt() timer1(){
     if(TMR1IF){
         TMR1=15536;
         TMR1IF=0;
         sayac++;
         if(sayac==20){
-            RB0=1;
-        }
-        if(sayac==40){
             sayac=0;
-            RB0=0;
+            saniye++;
+            RB0=RB0^1;
         }
     }
 }
 
 main() {
     PCONbits.OSCF=1;//dahili osilator secildi
-    
     INTCONbits.GIE=1;
     INTCONbits.PEIE=1;
     PIE1bits.TMR1IE=1;
-    
     T1CONbits.T1CKPS0=0;
     T1CONbits.T1CKPS1=0;
     T1CONbits.TMR1CS=0;
     T1CONbits.TMR1ON=1;
             
-    TRISB0=0;
-    TRISB1=0;
-    TRISB4=1;
-    
+    TRISB=0x00;
+    PORTB=0;
     while(1){
-
+        
+        if(saniye>=60){
+            saniye=0;
+            dakika++;
+            if(dakika>=60){
+                dakika=0;
+                saat++;
+                if(saat>=24){
+                    saat=0;
+                }
+            }
+        }
+        //PORTB=saniye;
     }
 }
