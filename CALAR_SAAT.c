@@ -25,7 +25,6 @@ void __interrupt() timer1(){
         if(sayac==20){
             sayac=0;
             saniye++;
-            RB0=RB0^1;
         }
     }
 }
@@ -44,7 +43,7 @@ main() {
     PORTB=0;
     while(1){
         
-        if(saniye>=60){
+        if(saniye>=60){//zamani artrima kodu
             saniye=0;
             dakika++;
             if(dakika>=60){
@@ -55,6 +54,9 @@ main() {
                 }
             }
         }
-        //PORTB=saniye;
+        short saatOnluk=saat/10, saatBirlik=saat%10,
+              dkOnluk=dakika/10,dkBirlik=dakika%10,
+              sanOnluk=saniye/10,sanBirlik=saniye%10;
+        PORTB=sanOnluk;
     }
 }

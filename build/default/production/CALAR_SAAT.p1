@@ -7,9 +7,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "445
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 445: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
 [v _TMR1 `Vus ~T0 @X0 0 e@14 ]
-"1486
-[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1486: extern volatile __bit RB0 __attribute__((address(0x30)));
-[v _RB0 `Vb ~T0 @X0 0 e@48 ]
 [p mainexit ]
 "1094
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1094:     struct {
@@ -253,107 +250,125 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CALAR_SAAT.c: 27:             saniye++;
 [e ++ _saniye -> -> 1 `i `s ]
 "28
-[; ;CALAR_SAAT.c: 28:             RB0=RB0^1;
-[e = _RB0 -> ^ -> _RB0 `i -> 1 `i `b ]
-"29
-[; ;CALAR_SAAT.c: 29:         }
+[; ;CALAR_SAAT.c: 28:         }
 }
 [e :U 57 ]
-"30
-[; ;CALAR_SAAT.c: 30:     }
+"29
+[; ;CALAR_SAAT.c: 29:     }
 }
 [e :U 56 ]
-"31
-[; ;CALAR_SAAT.c: 31: }
+"30
+[; ;CALAR_SAAT.c: 30: }
 [e :UE 55 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"33
-[; ;CALAR_SAAT.c: 33: main() {
+"32
+[; ;CALAR_SAAT.c: 32: main() {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"34
-[; ;CALAR_SAAT.c: 34:     PCONbits.OSCF=1;
+"33
+[; ;CALAR_SAAT.c: 33:     PCONbits.OSCF=1;
 [e = . . _PCONbits 0 3 -> -> 1 `i `uc ]
-"35
-[; ;CALAR_SAAT.c: 35:     INTCONbits.GIE=1;
+"34
+[; ;CALAR_SAAT.c: 34:     INTCONbits.GIE=1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"36
-[; ;CALAR_SAAT.c: 36:     INTCONbits.PEIE=1;
+"35
+[; ;CALAR_SAAT.c: 35:     INTCONbits.PEIE=1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"37
-[; ;CALAR_SAAT.c: 37:     PIE1bits.TMR1IE=1;
+"36
+[; ;CALAR_SAAT.c: 36:     PIE1bits.TMR1IE=1;
 [e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"38
-[; ;CALAR_SAAT.c: 38:     T1CONbits.T1CKPS0=0;
+"37
+[; ;CALAR_SAAT.c: 37:     T1CONbits.T1CKPS0=0;
 [e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
-"39
-[; ;CALAR_SAAT.c: 39:     T1CONbits.T1CKPS1=0;
+"38
+[; ;CALAR_SAAT.c: 38:     T1CONbits.T1CKPS1=0;
 [e = . . _T1CONbits 1 2 -> -> 0 `i `uc ]
-"40
-[; ;CALAR_SAAT.c: 40:     T1CONbits.TMR1CS=0;
+"39
+[; ;CALAR_SAAT.c: 39:     T1CONbits.TMR1CS=0;
 [e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
-"41
-[; ;CALAR_SAAT.c: 41:     T1CONbits.TMR1ON=1;
+"40
+[; ;CALAR_SAAT.c: 40:     T1CONbits.TMR1ON=1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"43
-[; ;CALAR_SAAT.c: 43:     TRISB=0x00;
+"42
+[; ;CALAR_SAAT.c: 42:     TRISB=0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"44
-[; ;CALAR_SAAT.c: 44:     PORTB=0;
+"43
+[; ;CALAR_SAAT.c: 43:     PORTB=0;
 [e = _PORTB -> -> 0 `i `uc ]
-"45
-[; ;CALAR_SAAT.c: 45:     while(1){
+"44
+[; ;CALAR_SAAT.c: 44:     while(1){
 [e :U 60 ]
 {
-"47
-[; ;CALAR_SAAT.c: 47:         if(saniye>=60){
+"46
+[; ;CALAR_SAAT.c: 46:         if(saniye>=60){
 [e $ ! >= -> _saniye `i -> 60 `i 62  ]
 {
-"48
-[; ;CALAR_SAAT.c: 48:             saniye=0;
+"47
+[; ;CALAR_SAAT.c: 47:             saniye=0;
 [e = _saniye -> -> 0 `i `s ]
-"49
-[; ;CALAR_SAAT.c: 49:             dakika++;
+"48
+[; ;CALAR_SAAT.c: 48:             dakika++;
 [e ++ _dakika -> -> 1 `i `s ]
-"50
-[; ;CALAR_SAAT.c: 50:             if(dakika>=60){
+"49
+[; ;CALAR_SAAT.c: 49:             if(dakika>=60){
 [e $ ! >= -> _dakika `i -> 60 `i 63  ]
 {
-"51
-[; ;CALAR_SAAT.c: 51:                 dakika=0;
+"50
+[; ;CALAR_SAAT.c: 50:                 dakika=0;
 [e = _dakika -> -> 0 `i `s ]
-"52
-[; ;CALAR_SAAT.c: 52:                 saat++;
+"51
+[; ;CALAR_SAAT.c: 51:                 saat++;
 [e ++ _saat -> -> 1 `i `s ]
-"53
-[; ;CALAR_SAAT.c: 53:                 if(saat>=24){
+"52
+[; ;CALAR_SAAT.c: 52:                 if(saat>=24){
 [e $ ! >= -> _saat `i -> 24 `i 64  ]
 {
-"54
-[; ;CALAR_SAAT.c: 54:                     saat=0;
+"53
+[; ;CALAR_SAAT.c: 53:                     saat=0;
 [e = _saat -> -> 0 `i `s ]
-"55
-[; ;CALAR_SAAT.c: 55:                 }
+"54
+[; ;CALAR_SAAT.c: 54:                 }
 }
 [e :U 64 ]
-"56
-[; ;CALAR_SAAT.c: 56:             }
+"55
+[; ;CALAR_SAAT.c: 55:             }
 }
 [e :U 63 ]
-"57
-[; ;CALAR_SAAT.c: 57:         }
+"56
+[; ;CALAR_SAAT.c: 56:         }
 }
 [e :U 62 ]
+"57
+[; ;CALAR_SAAT.c: 57:         short saatOnluk=saat/10, saatBirlik=saat%10,
+[v _saatOnluk `s ~T0 @X0 1 a ]
+[e = _saatOnluk -> / -> _saat `i -> 10 `i `s ]
+[v _saatBirlik `s ~T0 @X0 1 a ]
+[e = _saatBirlik -> % -> _saat `i -> 10 `i `s ]
+"58
+[; ;CALAR_SAAT.c: 58:               dkOnluk=dakika/10,dkBirlik=dakika%10,
+[v _dkOnluk `s ~T0 @X0 1 a ]
+[e = _dkOnluk -> / -> _dakika `i -> 10 `i `s ]
+[v _dkBirlik `s ~T0 @X0 1 a ]
+[e = _dkBirlik -> % -> _dakika `i -> 10 `i `s ]
 "59
-[; ;CALAR_SAAT.c: 59:     }
+[; ;CALAR_SAAT.c: 59:               sanOnluk=saniye/10,sanBirlik=saniye%10;
+[v _sanOnluk `s ~T0 @X0 1 a ]
+[e = _sanOnluk -> / -> _saniye `i -> 10 `i `s ]
+[v _sanBirlik `s ~T0 @X0 1 a ]
+[e = _sanBirlik -> % -> _saniye `i -> 10 `i `s ]
+"60
+[; ;CALAR_SAAT.c: 60:         PORTB=sanOnluk;
+[e = _PORTB -> _sanOnluk `uc ]
+"61
+[; ;CALAR_SAAT.c: 61:     }
 }
 [e :U 59 ]
 [e $U 60  ]
 [e :U 61 ]
-"60
-[; ;CALAR_SAAT.c: 60: }
+"62
+[; ;CALAR_SAAT.c: 62: }
 [e :UE 58 ]
 }

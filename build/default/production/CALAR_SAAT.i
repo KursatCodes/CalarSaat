@@ -1202,7 +1202,6 @@ void __attribute__((picinterrupt(("")))) timer1(){
         if(sayac==20){
             sayac=0;
             saniye++;
-            RB0=RB0^1;
         }
     }
 }
@@ -1232,6 +1231,9 @@ main() {
                 }
             }
         }
-
+        short saatOnluk=saat/10, saatBirlik=saat%10,
+              dkOnluk=dakika/10,dkBirlik=dakika%10,
+              sanOnluk=saniye/10,sanBirlik=saniye%10;
+        PORTB=sanOnluk;
     }
 }
