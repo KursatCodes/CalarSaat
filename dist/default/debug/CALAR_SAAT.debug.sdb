@@ -15,15 +15,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"23 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
-[v _zamaniArttir zamaniArttir `(v  1 e 1 0 ]
-"37
+"37 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
 [v _timer1 timer1 `II(v  1 e 1 0 ]
-"49
+"54
 [v _main main `(i  1 e 2 0 ]
 "228 C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S47 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S48 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -33,31 +31,31 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "333
-[s S56 . 1 `uc 1 . 1 0 :2:0 
+[s S57 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S61 . 1 `S47 1 . 1 0 `S56 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES61  1 e 1 @11 ]
+[u S62 . 1 `S48 1 . 1 0 `S57 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES62  1 e 1 @11 ]
 "445
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
-[s S100 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S101 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
 `uc 1 T1CKPS 1 0 :2:4 
 ]
 "485
-[s S106 . 1 `uc 1 . 1 0 :4:0 
+[s S107 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[u S110 . 1 `S100 1 . 1 0 `S106 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES110  1 e 1 @16 ]
+[u S111 . 1 `S101 1 . 1 0 `S107 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES111  1 e 1 @16 ]
 "969
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S79 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S80 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -67,20 +65,20 @@
 `uc 1 EEIE 1 0 :1:7 
 ]
 "1048
-[u S88 . 1 `S79 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES88  1 e 1 @140 ]
-[s S24 . 1 `uc 1 nBOR 1 0 :1:0 
+[u S89 . 1 `S80 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES89  1 e 1 @140 ]
+[s S25 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 OSCF 1 0 :1:3 
 ]
 "1107
-[s S29 . 1 `uc 1 nBO 1 0 :1:0 
+[s S30 . 1 `uc 1 nBO 1 0 :1:0 
 ]
-[s S31 . 1 `uc 1 nBOD 1 0 :1:0 
+[s S32 . 1 `uc 1 nBOD 1 0 :1:0 
 ]
-[u S33 . 1 `S24 1 . 1 0 `S29 1 . 1 0 `S31 1 . 1 0 ]
-[v _PCONbits PCONbits `VES33  1 e 1 @142 ]
+[u S34 . 1 `S25 1 . 1 0 `S30 1 . 1 0 `S32 1 . 1 0 ]
+[v _PCONbits PCONbits `VES34  1 e 1 @142 ]
 "1585
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "18 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
@@ -90,7 +88,7 @@
 [v _saat saat `s  1 e 2 0 ]
 "19
 [v _sayilar sayilar `[2]*.24uc  1 e 2 0 ]
-"49
+"54
 [v _main main `(i  1 e 2 0 ]
 {
 "76
@@ -99,11 +97,11 @@
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 8 ]
-[v ___awmod@counter counter `uc  1 a 1 7 ]
+[v ___awmod@sign sign `uc  1 a 1 7 ]
+[v ___awmod@counter counter `uc  1 a 1 6 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 3 ]
-[v ___awmod@dividend dividend `i  1 p 2 5 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+[v ___awmod@dividend dividend `i  1 p 2 4 ]
 "34
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
@@ -115,17 +113,12 @@
 [v ___awdiv@sign sign `uc  1 a 1 1 ]
 [v ___awdiv@counter counter `uc  1 a 1 0 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 3 ]
-[v ___awdiv@dividend dividend `i  1 p 2 5 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+[v ___awdiv@dividend dividend `i  1 p 2 4 ]
 "41
 } 0
 "37 D:\MPLAB_PROJELER\CALAR_SAAT\CALAR_SAAT.c
 [v _timer1 timer1 `II(v  1 e 1 0 ]
 {
-"47
-} 0
-"23
-[v _zamaniArttir zamaniArttir `(v  1 e 1 0 ]
-{
-"36
+"52
 } 0

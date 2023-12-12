@@ -7,6 +7,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "445
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 445: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
 [v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+"228
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 [p mainexit ]
 "1094
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1094:     struct {
@@ -71,9 +74,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "969
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 969: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"228
-[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "5 CALAR_SAAT.c
 [p x FOSC  =  INTOSCIO   ]
 "6
@@ -301,90 +301,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CALAR_SAAT.c: 41:         sayac++;
 [e ++ _sayac -> -> 1 `i `s ]
 "42
-[; ;CALAR_SAAT.c: 42:         if(sayac==40){
-[e $ ! == -> _sayac `i -> 40 `i 61  ]
+[; ;CALAR_SAAT.c: 42:         if(sayac==20){
+[e $ ! == -> _sayac `i -> 20 `i 61  ]
 {
-"43
-[; ;CALAR_SAAT.c: 43:             sayac=0;
-[e = _sayac -> -> 0 `i `s ]
-"44
-[; ;CALAR_SAAT.c: 44:             zamaniArttir();
-[e ( _zamaniArttir ..  ]
 "45
-[; ;CALAR_SAAT.c: 45:         }
+[; ;CALAR_SAAT.c: 45:             PORTB=sayilar[0];
+[e = _PORTB -> *U + &U _sayilar * -> -> -> 0 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
+"46
+[; ;CALAR_SAAT.c: 46:         }
 }
 [e :U 61 ]
-"46
-[; ;CALAR_SAAT.c: 46:     }
+"47
+[; ;CALAR_SAAT.c: 47:         if(sayac==40){
+[e $ ! == -> _sayac `i -> 40 `i 62  ]
+{
+"48
+[; ;CALAR_SAAT.c: 48:             sayac=0;
+[e = _sayac -> -> 0 `i `s ]
+"49
+[; ;CALAR_SAAT.c: 49:             PORTB=sayilar[1];
+[e = _PORTB -> *U + &U _sayilar * -> -> -> 1 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
+"50
+[; ;CALAR_SAAT.c: 50:         }
+}
+[e :U 62 ]
+"51
+[; ;CALAR_SAAT.c: 51:     }
 }
 [e :U 60 ]
-"47
-[; ;CALAR_SAAT.c: 47: }
+"52
+[; ;CALAR_SAAT.c: 52: }
 [e :UE 59 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
-[; ;CALAR_SAAT.c: 49: main() {
+"54
+[; ;CALAR_SAAT.c: 54: main() {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"50
-[; ;CALAR_SAAT.c: 50:     PCONbits.OSCF=1;
-[e = . . _PCONbits 0 3 -> -> 1 `i `uc ]
-"51
-[; ;CALAR_SAAT.c: 51:     INTCONbits.GIE=1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"52
-[; ;CALAR_SAAT.c: 52:     INTCONbits.PEIE=1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"53
-[; ;CALAR_SAAT.c: 53:     PIE1bits.TMR1IE=1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"54
-[; ;CALAR_SAAT.c: 54:     T1CONbits.T1CKPS0=0;
-[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
 "55
-[; ;CALAR_SAAT.c: 55:     T1CONbits.T1CKPS1=0;
-[e = . . _T1CONbits 1 2 -> -> 0 `i `uc ]
+[; ;CALAR_SAAT.c: 55:     PCONbits.OSCF=1;
+[e = . . _PCONbits 0 3 -> -> 1 `i `uc ]
 "56
-[; ;CALAR_SAAT.c: 56:     T1CONbits.TMR1CS=0;
-[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;CALAR_SAAT.c: 56:     INTCONbits.GIE=1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "57
-[; ;CALAR_SAAT.c: 57:     T1CONbits.TMR1ON=1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;CALAR_SAAT.c: 57:     INTCONbits.PEIE=1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"58
+[; ;CALAR_SAAT.c: 58:     PIE1bits.TMR1IE=1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
 "59
-[; ;CALAR_SAAT.c: 59:     TRISB=0x00;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;CALAR_SAAT.c: 59:     T1CONbits.T1CKPS0=0;
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
 "60
-[; ;CALAR_SAAT.c: 60:     PORTB=0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;CALAR_SAAT.c: 60:     T1CONbits.T1CKPS1=0;
+[e = . . _T1CONbits 1 2 -> -> 0 `i `uc ]
 "61
-[; ;CALAR_SAAT.c: 61:     while(1){
-[e :U 64 ]
-{
+[; ;CALAR_SAAT.c: 61:     T1CONbits.TMR1CS=0;
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
 "62
-[; ;CALAR_SAAT.c: 62:         if(sayac==19){
-[e $ ! == -> _sayac `i -> 19 `i 66  ]
-{
-"63
-[; ;CALAR_SAAT.c: 63:             PORTB=sayilar[0];
-[e = _PORTB -> *U + &U _sayilar * -> -> -> 0 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
+[; ;CALAR_SAAT.c: 62:     T1CONbits.TMR1ON=1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
 "64
-[; ;CALAR_SAAT.c: 64:         }
-}
-[e :U 66 ]
+[; ;CALAR_SAAT.c: 64:     TRISB=0x00;
+[e = _TRISB -> -> 0 `i `uc ]
 "65
-[; ;CALAR_SAAT.c: 65:         if(sayac==0){
-[e $ ! == -> _sayac `i -> 0 `i 67  ]
-{
+[; ;CALAR_SAAT.c: 65:     PORTB=0;
+[e = _PORTB -> -> 0 `i `uc ]
 "66
-[; ;CALAR_SAAT.c: 66:             PORTB=sayilar[1];
-[e = _PORTB -> *U + &U _sayilar * -> -> -> 1 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
-"67
-[; ;CALAR_SAAT.c: 67:         }
-}
-[e :U 67 ]
+[; ;CALAR_SAAT.c: 66:     while(1){
+[e :U 65 ]
+{
 "68
 [; ;CALAR_SAAT.c: 68:         short saatOnluk=saat/10, saatBirlik=saat%10,
 [v _saatOnluk `s ~T0 @X0 1 a ]
@@ -406,12 +395,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75
 [; ;CALAR_SAAT.c: 75:     }
 }
-[e :U 63 ]
-[e $U 64  ]
-[e :U 65 ]
+[e :U 64 ]
+[e $U 65  ]
+[e :U 66 ]
 "76
 [; ;CALAR_SAAT.c: 76: }
-[e :UE 62 ]
+[e :UE 63 ]
 }
 [a 1C 48 120 70 70 0 ]
 [a 2C 48 120 48 48 0 ]

@@ -1216,9 +1216,14 @@ void __attribute__((picinterrupt(("")))) timer1(){
         TMR1=15536;
         TMR1IF=0;
         sayac++;
+        if(sayac==20){
+
+
+            PORTB=sayilar[0];
+        }
         if(sayac==40){
             sayac=0;
-            zamaniArttir();
+            PORTB=sayilar[1];
         }
     }
 }
@@ -1236,12 +1241,7 @@ main() {
     TRISB=0x00;
     PORTB=0;
     while(1){
-        if(sayac==19){
-            PORTB=sayilar[0];
-        }
-        if(sayac==0){
-            PORTB=sayilar[1];
-        }
+
         short saatOnluk=saat/10, saatBirlik=saat%10,
               dkOnluk=dakika/10,dkBirlik=dakika%10,
               sanOnluk=saniye/10,sanBirlik=saniye%10;
