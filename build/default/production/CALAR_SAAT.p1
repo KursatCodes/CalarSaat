@@ -1,12 +1,27 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"166 C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"907
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 907: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"1585 C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h
+"1585
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1585: extern volatile __bit TMR1IF __attribute__((address(0x60)));
 [v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
 "445
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 445: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
 [v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+"228
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1468
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1468: extern volatile __bit RA2 __attribute__((address(0x2A)));
+[v _RA2 `Vb ~T0 @X0 0 e@42 ]
+"1465
+[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1465: extern volatile __bit RA1 __attribute__((address(0x29)));
+[v _RA1 `Vb ~T0 @X0 0 e@41 ]
 [p mainexit ]
 "1094
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1094:     struct {
@@ -71,9 +86,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "969
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 969: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"228
-[; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "5 CALAR_SAAT.c
 [p x FOSC  =  INTOSCIO   ]
 "6
@@ -202,7 +214,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/Muhammed/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.5.151/xc8\pic\include\proc\pic16f628a.h: 1269: __asm("VRCON equ 09Fh");
 [; <" VRCON equ 09Fh ;# ">
 "18 CALAR_SAAT.c
-[; ;CALAR_SAAT.c: 18: short sayac=0,saniye=0,dakika=0,saat=0;
+[; ;CALAR_SAAT.c: 18: short sayac=0,saniye=0,dakika=0,saat=0,degisken=0;
 [v _sayac `s ~T0 @X0 1 e ]
 [i _sayac
 -> -> 0 `i `s
@@ -219,199 +231,277 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _saat
 -> -> 0 `i `s
 ]
-"19
-[; ;CALAR_SAAT.c: 19: char *sayilar[]={
-[v _sayilar `*uc ~T0 @X0 -> 2 `i e ]
+[v _degisken `s ~T0 @X0 1 e ]
+[i _degisken
+-> -> 0 `i `s
+]
+"20
+[; ;CALAR_SAAT.c: 20: int *sayilar[]={
+[v _sayilar `*i ~T0 @X0 -> 10 `i e ]
 [i _sayilar
 :U ..
-:s 1C
-:s 2C
+-> -> 63 `i `*i
+-> -> 6 `i `*i
+-> -> 91 `i `*i
+-> -> 79 `i `*i
+-> -> 102 `i `*i
+-> -> 109 `i `*i
+-> -> 125 `i `*i
+-> -> 7 `i `*i
+-> -> 127 `i `*i
+-> -> 111 `i `*i
 ..
 ]
-"23
-[; ;CALAR_SAAT.c: 23: void zamaniArttir(){
+"24
+[; ;CALAR_SAAT.c: 24: void zamaniArttir(){
 [v _zamaniArttir `(v ~T0 @X0 1 ef ]
 {
 [e :U _zamaniArttir ]
 [f ]
-"24
-[; ;CALAR_SAAT.c: 24:     saniye++;
-[e ++ _saniye -> -> 1 `i `s ]
 "25
-[; ;CALAR_SAAT.c: 25:     if(saniye>=60){
+[; ;CALAR_SAAT.c: 25:     saniye++;
+[e ++ _saniye -> -> 1 `i `s ]
+"26
+[; ;CALAR_SAAT.c: 26:     if(saniye>=60){
 [e $ ! >= -> _saniye `i -> 60 `i 56  ]
 {
-"26
-[; ;CALAR_SAAT.c: 26:             saniye=0;
-[e = _saniye -> -> 0 `i `s ]
 "27
-[; ;CALAR_SAAT.c: 27:             dakika++;
-[e ++ _dakika -> -> 1 `i `s ]
+[; ;CALAR_SAAT.c: 27:             saniye=0;
+[e = _saniye -> -> 0 `i `s ]
 "28
-[; ;CALAR_SAAT.c: 28:             if(dakika>=60){
+[; ;CALAR_SAAT.c: 28:             dakika++;
+[e ++ _dakika -> -> 1 `i `s ]
+"29
+[; ;CALAR_SAAT.c: 29:             if(dakika>=60){
 [e $ ! >= -> _dakika `i -> 60 `i 57  ]
 {
-"29
-[; ;CALAR_SAAT.c: 29:                 dakika=0;
-[e = _dakika -> -> 0 `i `s ]
 "30
-[; ;CALAR_SAAT.c: 30:                 saat++;
-[e ++ _saat -> -> 1 `i `s ]
+[; ;CALAR_SAAT.c: 30:                 dakika=0;
+[e = _dakika -> -> 0 `i `s ]
 "31
-[; ;CALAR_SAAT.c: 31:                 if(saat>=24){
+[; ;CALAR_SAAT.c: 31:                 saat++;
+[e ++ _saat -> -> 1 `i `s ]
+"32
+[; ;CALAR_SAAT.c: 32:                 if(saat>=24){
 [e $ ! >= -> _saat `i -> 24 `i 58  ]
 {
-"32
-[; ;CALAR_SAAT.c: 32:                     saat=0;
-[e = _saat -> -> 0 `i `s ]
 "33
-[; ;CALAR_SAAT.c: 33:                 }
+[; ;CALAR_SAAT.c: 33:                     saat=0;
+[e = _saat -> -> 0 `i `s ]
+"34
+[; ;CALAR_SAAT.c: 34:                 }
 }
 [e :U 58 ]
-"34
-[; ;CALAR_SAAT.c: 34:             }
+"35
+[; ;CALAR_SAAT.c: 35:             }
 }
 [e :U 57 ]
-"35
-[; ;CALAR_SAAT.c: 35:         }
+"36
+[; ;CALAR_SAAT.c: 36:         }
 }
 [e :U 56 ]
-"36
-[; ;CALAR_SAAT.c: 36: }
+"37
+[; ;CALAR_SAAT.c: 37: }
 [e :UE 55 ]
 }
+"38
+[; ;CALAR_SAAT.c: 38: void birinciDisplay(){
+[v _birinciDisplay `(v ~T0 @X0 1 ef ]
+{
+[e :U _birinciDisplay ]
+[f ]
+"39
+[; ;CALAR_SAAT.c: 39:     PORTA=0b00000000;
+[e = _PORTA -> -> 0 `i `uc ]
+"40
+[; ;CALAR_SAAT.c: 40: }
+[e :UE 59 ]
+}
+"41
+[; ;CALAR_SAAT.c: 41: void ikinciDisplay(){
+[v _ikinciDisplay `(v ~T0 @X0 1 ef ]
+{
+[e :U _ikinciDisplay ]
+[f ]
+"42
+[; ;CALAR_SAAT.c: 42:     PORTA=0b00000000;
+[e = _PORTA -> -> 0 `i `uc ]
+"43
+[; ;CALAR_SAAT.c: 43: }
+[e :UE 60 ]
+}
+"44
+[; ;CALAR_SAAT.c: 44: void ucuncuDisplay(){
+[v _ucuncuDisplay `(v ~T0 @X0 1 ef ]
+{
+[e :U _ucuncuDisplay ]
+[f ]
+"45
+[; ;CALAR_SAAT.c: 45:     TRISA=0b01000000;
+[e = _TRISA -> -> 64 `i `uc ]
+"46
+[; ;CALAR_SAAT.c: 46: }
+[e :UE 61 ]
+}
+"47
+[; ;CALAR_SAAT.c: 47: void dorduncuDisplay(){
+[v _dorduncuDisplay `(v ~T0 @X0 1 ef ]
+{
+[e :U _dorduncuDisplay ]
+[f ]
+"48
+[; ;CALAR_SAAT.c: 48:     TRISA=0b10000000;
+[e = _TRISA -> -> 128 `i `uc ]
+"49
+[; ;CALAR_SAAT.c: 49: }
+[e :UE 62 ]
+}
 [v $root$_timer1 `(v ~T0 @X0 0 e ]
-"37
-[; ;CALAR_SAAT.c: 37: void __attribute__((picinterrupt(("")))) timer1(){
+"50
+[; ;CALAR_SAAT.c: 50: void __attribute__((picinterrupt(("")))) timer1(){
 [v _timer1 `(v ~T1 @X0 1 ef ]
 {
 [e :U _timer1 ]
 [f ]
-"38
-[; ;CALAR_SAAT.c: 38:     if(TMR1IF){
-[e $ ! _TMR1IF 60  ]
+"51
+[; ;CALAR_SAAT.c: 51:     if(TMR1IF){
+[e $ ! _TMR1IF 64  ]
 {
-"39
-[; ;CALAR_SAAT.c: 39:         TMR1=15536;
+"52
+[; ;CALAR_SAAT.c: 52:         TMR1=15536;
 [e = _TMR1 -> -> 15536 `i `us ]
-"40
-[; ;CALAR_SAAT.c: 40:         TMR1IF=0;
+"53
+[; ;CALAR_SAAT.c: 53:         TMR1IF=0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"41
-[; ;CALAR_SAAT.c: 41:         sayac++;
+"54
+[; ;CALAR_SAAT.c: 54:         sayac++;
 [e ++ _sayac -> -> 1 `i `s ]
-"42
-[; ;CALAR_SAAT.c: 42:         if(sayac==40){
-[e $ ! == -> _sayac `i -> 40 `i 61  ]
+"55
+[; ;CALAR_SAAT.c: 55:         if(sayac==20){
+[e $ ! == -> _sayac `i -> 20 `i 65  ]
 {
-"43
-[; ;CALAR_SAAT.c: 43:             sayac=0;
-[e = _sayac -> -> 0 `i `s ]
-"44
-[; ;CALAR_SAAT.c: 44:             zamaniArttir();
+"57
+[; ;CALAR_SAAT.c: 57:             zamaniArttir();
 [e ( _zamaniArttir ..  ]
-"45
-[; ;CALAR_SAAT.c: 45:         }
+"58
+[; ;CALAR_SAAT.c: 58:             PORTB=sayilar[degisken];
+[e = _PORTB -> *U + &U _sayilar * -> -> _degisken `us `ux -> -> # *U &U _sayilar `ui `ux `uc ]
+"59
+[; ;CALAR_SAAT.c: 59:             RA2=1;
+[e = _RA2 -> -> 1 `i `b ]
+"60
+[; ;CALAR_SAAT.c: 60:             RA1=0;
+[e = _RA1 -> -> 0 `i `b ]
+"61
+[; ;CALAR_SAAT.c: 61:         }
 }
-[e :U 61 ]
-"46
-[; ;CALAR_SAAT.c: 46:     }
+[e :U 65 ]
+"62
+[; ;CALAR_SAAT.c: 62:         if(sayac==40){
+[e $ ! == -> _sayac `i -> 40 `i 66  ]
+{
+"63
+[; ;CALAR_SAAT.c: 63:             sayac=0;
+[e = _sayac -> -> 0 `i `s ]
+"64
+[; ;CALAR_SAAT.c: 64:             zamaniArttir();
+[e ( _zamaniArttir ..  ]
+"65
+[; ;CALAR_SAAT.c: 65:             PORTB=sayilar[degisken];
+[e = _PORTB -> *U + &U _sayilar * -> -> _degisken `us `ux -> -> # *U &U _sayilar `ui `ux `uc ]
+"66
+[; ;CALAR_SAAT.c: 66:             RA2=0;
+[e = _RA2 -> -> 0 `i `b ]
+"67
+[; ;CALAR_SAAT.c: 67:             RA1=1;
+[e = _RA1 -> -> 1 `i `b ]
+"68
+[; ;CALAR_SAAT.c: 68:         }
 }
-[e :U 60 ]
-"47
-[; ;CALAR_SAAT.c: 47: }
-[e :UE 59 ]
+[e :U 66 ]
+"70
+[; ;CALAR_SAAT.c: 70:     }
+}
+[e :U 64 ]
+"71
+[; ;CALAR_SAAT.c: 71: }
+[e :UE 63 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
-[; ;CALAR_SAAT.c: 49: main() {
+"73
+[; ;CALAR_SAAT.c: 73: main() {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"50
-[; ;CALAR_SAAT.c: 50:     PCONbits.OSCF=1;
+"74
+[; ;CALAR_SAAT.c: 74:     PCONbits.OSCF=1;
 [e = . . _PCONbits 0 3 -> -> 1 `i `uc ]
-"51
-[; ;CALAR_SAAT.c: 51:     INTCONbits.GIE=1;
+"75
+[; ;CALAR_SAAT.c: 75:     INTCONbits.GIE=1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"52
-[; ;CALAR_SAAT.c: 52:     INTCONbits.PEIE=1;
+"76
+[; ;CALAR_SAAT.c: 76:     INTCONbits.PEIE=1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"53
-[; ;CALAR_SAAT.c: 53:     PIE1bits.TMR1IE=1;
+"77
+[; ;CALAR_SAAT.c: 77:     PIE1bits.TMR1IE=1;
 [e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"54
-[; ;CALAR_SAAT.c: 54:     T1CONbits.T1CKPS0=0;
+"78
+[; ;CALAR_SAAT.c: 78:     T1CONbits.T1CKPS0=0;
 [e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
-"55
-[; ;CALAR_SAAT.c: 55:     T1CONbits.T1CKPS1=0;
+"79
+[; ;CALAR_SAAT.c: 79:     T1CONbits.T1CKPS1=0;
 [e = . . _T1CONbits 1 2 -> -> 0 `i `uc ]
-"56
-[; ;CALAR_SAAT.c: 56:     T1CONbits.TMR1CS=0;
+"80
+[; ;CALAR_SAAT.c: 80:     T1CONbits.TMR1CS=0;
 [e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
-"57
-[; ;CALAR_SAAT.c: 57:     T1CONbits.TMR1ON=1;
+"81
+[; ;CALAR_SAAT.c: 81:     T1CONbits.TMR1ON=1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"59
-[; ;CALAR_SAAT.c: 59:     TRISB=0x00;
+"83
+[; ;CALAR_SAAT.c: 83:     TRISB=0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"60
-[; ;CALAR_SAAT.c: 60:     PORTB=0;
+"84
+[; ;CALAR_SAAT.c: 84:     TRISA=0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"85
+[; ;CALAR_SAAT.c: 85:     PORTB=0;
 [e = _PORTB -> -> 0 `i `uc ]
-"61
-[; ;CALAR_SAAT.c: 61:     while(1){
-[e :U 64 ]
+"86
+[; ;CALAR_SAAT.c: 86:     PORTA=0;
+[e = _PORTA -> -> 0 `i `uc ]
+"87
+[; ;CALAR_SAAT.c: 87:     while(1){
+[e :U 69 ]
 {
-"62
-[; ;CALAR_SAAT.c: 62:         if(sayac==19){
-[e $ ! == -> _sayac `i -> 19 `i 66  ]
-{
-"63
-[; ;CALAR_SAAT.c: 63:             PORTB=sayilar[0];
-[e = _PORTB -> *U + &U _sayilar * -> -> -> 0 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
-"64
-[; ;CALAR_SAAT.c: 64:         }
-}
-[e :U 66 ]
-"65
-[; ;CALAR_SAAT.c: 65:         if(sayac==0){
-[e $ ! == -> _sayac `i -> 0 `i 67  ]
-{
-"66
-[; ;CALAR_SAAT.c: 66:             PORTB=sayilar[1];
-[e = _PORTB -> *U + &U _sayilar * -> -> -> 1 `i `ui `ux -> -> # *U &U _sayilar `ui `ux `uc ]
-"67
-[; ;CALAR_SAAT.c: 67:         }
-}
-[e :U 67 ]
-"68
-[; ;CALAR_SAAT.c: 68:         short saatOnluk=saat/10, saatBirlik=saat%10,
+"88
+[; ;CALAR_SAAT.c: 88:         short saatOnluk=saat/10, saatBirlik=saat%10,
 [v _saatOnluk `s ~T0 @X0 1 a ]
 [e = _saatOnluk -> / -> _saat `i -> 10 `i `s ]
 [v _saatBirlik `s ~T0 @X0 1 a ]
 [e = _saatBirlik -> % -> _saat `i -> 10 `i `s ]
-"69
-[; ;CALAR_SAAT.c: 69:               dkOnluk=dakika/10,dkBirlik=dakika%10,
+"89
+[; ;CALAR_SAAT.c: 89:               dkOnluk=dakika/10,dkBirlik=dakika%10,
 [v _dkOnluk `s ~T0 @X0 1 a ]
 [e = _dkOnluk -> / -> _dakika `i -> 10 `i `s ]
 [v _dkBirlik `s ~T0 @X0 1 a ]
 [e = _dkBirlik -> % -> _dakika `i -> 10 `i `s ]
-"70
-[; ;CALAR_SAAT.c: 70:               sanOnluk=saniye/10,sanBirlik=saniye%10;
+"90
+[; ;CALAR_SAAT.c: 90:               sanOnluk=saniye/10,sanBirlik=saniye%10;
 [v _sanOnluk `s ~T0 @X0 1 a ]
 [e = _sanOnluk -> / -> _saniye `i -> 10 `i `s ]
 [v _sanBirlik `s ~T0 @X0 1 a ]
 [e = _sanBirlik -> % -> _saniye `i -> 10 `i `s ]
-"75
-[; ;CALAR_SAAT.c: 75:     }
+"91
+[; ;CALAR_SAAT.c: 91:         degisken=sanBirlik;
+[e = _degisken _sanBirlik ]
+"95
+[; ;CALAR_SAAT.c: 95:     }
 }
-[e :U 63 ]
-[e $U 64  ]
-[e :U 65 ]
-"76
-[; ;CALAR_SAAT.c: 76: }
-[e :UE 62 ]
+[e :U 68 ]
+[e $U 69  ]
+[e :U 70 ]
+"96
+[; ;CALAR_SAAT.c: 96: }
+[e :UE 67 ]
 }
-[a 1C 48 120 70 70 0 ]
-[a 2C 48 120 48 48 0 ]

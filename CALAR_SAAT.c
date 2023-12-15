@@ -15,9 +15,10 @@
 #include <xc.h>
 #define _XTAL_FREQ 4000000
 
-short sayac=0,saniye=0,dakika=0,saat=0;
-char *sayilar[]={
-            "0xFF","0x00"            
+short sayac=0,saniye=0,dakika=0,saat=0,degisken=0;
+
+int *sayilar[]={
+            0x3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F            
 };
 
 void zamaniArttir(){
@@ -34,15 +35,38 @@ void zamaniArttir(){
             }
         }
 }
+void birinciDisplay(){
+    PORTA=0b00000000; //soldan 1. display
+}
+void ikinciDisplay(){
+    PORTA=0b00000000; //soldan 2. display
+}
+void ucuncuDisplay(){
+    TRISA=0b01000000; //soldan 3. display
+}
+void dorduncuDisplay(){
+    TRISA=0b10000000; //soldan 4. display
+}
 void __interrupt() timer1(){
     if(TMR1IF){
         TMR1=15536;
         TMR1IF=0;
         sayac++;
+        if(sayac==20){
+            //sayac=0;
+            zamaniArttir();
+            PORTB=sayilar[degisken];
+            RA2=1;
+            RA1=0;
+        }
         if(sayac==40){
             sayac=0;
             zamaniArttir();
+            PORTB=sayilar[degisken];
+            RA2=0;
+            RA1=1;
         }
+        
     }
 }
 
@@ -55,20 +79,16 @@ main() {
     T1CONbits.T1CKPS1=0;
     T1CONbits.TMR1CS=0;
     T1CONbits.TMR1ON=1;
-            
+    
     TRISB=0x00;
+    TRISA=0x00;
     PORTB=0;
+    PORTA=0;
     while(1){
-        if(sayac==19){
-            PORTB=sayilar[0];
-        }
-        if(sayac==0){
-            PORTB=sayilar[1];
-        }
         short saatOnluk=saat/10, saatBirlik=saat%10,
               dkOnluk=dakika/10,dkBirlik=dakika%10,
               sanOnluk=saniye/10,sanBirlik=saniye%10;
-        
+        degisken=sanBirlik;
         // 7 segment displayde say? gösterecek komutlar? diziye ekle
         // 3 adet butonla saat malumat? girme algoritmas? yaz
         // butonlarla girilen zamanda alarm çal
